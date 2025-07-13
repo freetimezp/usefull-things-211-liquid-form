@@ -9,3 +9,153 @@
 a {
     text-decoration: none;
 }
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.main {
+    align-items: center;
+    background: url("../images/bg.jpg") 50% 50% no-repeat;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.heading {
+    color: #fff;
+    text-shadow: 2px 8px 4px #000000;
+    font-size: 4rem;
+    line-height: 1.2;
+    position: absolute;
+    top: 20px;
+}
+
+.liquid-glass {
+    width: 460px;
+    padding: 56px 40px;
+    position: absolute;
+    margin-top: 50px;
+    cursor: default;
+}
+
+.liquid-glass--bend,
+.liquid-glass--face,
+.liquid-glass--edge {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    border-radius: 26px;
+}
+
+.liquid-glass--bend {
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    filter: url(#filter);
+    z-index: 0;
+}
+
+.liquid-glass--face {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15), 0 0 12px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+}
+
+.liquid-glass--edge {
+    box-shadow: inset 3px 3px 3px 0 rgba(255, 255, 255, 1), inset -3px -3px 3px 0 rgba(255, 255, 255, 1);
+    z-index: 2;
+}
+
+.glass-drag-handle {
+    height: 24px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    cursor: grab;
+    opacity: 0;
+}
+
+.liquid-glass__menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.login-form h2 {
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 2.5rem;
+    margin: 12px 0;
+    text-align: left;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 18px 35px 18px 14px;
+    border: none;
+    outline: none;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.6);
+    color: #000;
+    backdrop-filter: blur(6px);
+    font-size: 0.8rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input-group input::placeholder {
+    color: #404040;
+}
+
+.input-group i {
+    position: absolute;
+    right: 12px;
+    color: #404040;
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+.forgot-password {
+    margin-top: -8px;
+    color: #000;
+    font-size: 0.85rem;
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button {
+    padding: 15px;
+    background: linear-gradient(135deg, #0f4c95, #a777e3);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border-radius: 26px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #a777e3, #0f4c95);
+}

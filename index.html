@@ -1,18 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <title>Project</title>
+    </head>
+    <body>
+        <main class="main">
+            <h1 class="heading">Liquid Glass Login</h1>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Project</title>
-</head>
+            <div class="liquid-glass">
+                <div class="liquid-glass--bend"></div>
+                <div class="liquid-glass--face"></div>
+                <div class="liquid-glass--edge"></div>
 
-<body>
-    start
+                <div class="glass-drag-handle"></div>
 
-    <script src="./assets/js/main.js"></script>
-</body>
+                <div class="liquid-glass__menu">
+                    <form class="login-form" action="#" method="POST">
+                        <h2>Sign In</h2>
 
+                        <div class="input-group">
+                            <input type="text" placeholder="Username" required />
+                            <i class="ri-user-line"></i>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" placeholder="Password" required />
+                            <i class="ri-lock-line"></i>
+                        </div>
+
+                        <div class="forgot-password">Forgot Password?</div>
+
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+            <filter id="filter" x="0" y="0" width="100%" height="100%" filterUnits="objectBoundingBox">
+                <feTurbulence type="fractalNoise" baseFrequency="0.003 0.007" numOctaves="1" result="turbulence" />
+                <feDisplacementMap
+                    in="SourceGraphic"
+                    in2="turbulence"
+                    scale="200"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                />
+            </filter>
+        </svg>
+
+        <script src="script.js"></script>
+    </body>
 </html>
